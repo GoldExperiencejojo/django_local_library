@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+<head>
+    {% block title %}<title>图书馆主页</title>{% endblock %}
+</head>
+{% block content %}
+<h1>图书馆主页</h1>
+
+  <p>欢迎来到 <em>图书馆</em>，一个rookie做的网站，学习自<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django">MDN<a></a></p>
+
+<h2>下面是动态内容</h2>
+
+  <p>图书馆的一些记录</p>
+  <ul>
+    <li><strong>书:</strong> {{ num_books }}</li>
+    <li><strong>副本:</strong> {{ num_instances }}</li>
+    <li><strong>可用的副本:</strong> {{ num_instances_available }}</li>
+    <li><strong>作者:</strong> {{ num_authors }}</li>
+    <li><strong>数据结构书籍:</strong> {{ num_datastrures }}</li>
+  </ul>
+<p>你已经访问本页面 {{ num_visits }} 次。</p>
+{% endblock %}
